@@ -3,4 +3,8 @@ class BankAccount
   def initialize
     @balance = 0
   end
+
+  def credit(amount)
+    @balance += amount
+  end
 end
