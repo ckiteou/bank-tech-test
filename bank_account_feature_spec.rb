@@ -46,3 +46,4 @@ ab.debit(500)
 p ab.balance
 p ab.transaction
 ab.pretty_print
+p ab.date

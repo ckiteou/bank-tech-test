@@ -18,4 +18,9 @@ class BankAccount
   def transactions(credits, debits)
     @transaction.push(credit: credits, debit: debits, balance: @balance)
   end
+
+  def date
+    date = Time.new
+    date.strftime('%m/%d/%Y')
+  end
 end
