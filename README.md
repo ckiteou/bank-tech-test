@@ -25,7 +25,7 @@ Date || Credit || Debit || Balance
 Clone the repo:
 
 ```
-$ git remote add origin https://github.com/ckiteou/bank-tech-test.git
+$ git clone https://github.com/ckiteou/bank-tech-test.git
 $ cd 'bank-tech-test'
 ```
 
