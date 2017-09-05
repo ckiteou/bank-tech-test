@@ -33,14 +33,8 @@ describe BankAccount do
       subject.credit(2000)
       subject.debit(500)
       expect(subject.transaction).to eq [{:date=>"09/05/2017", :credit=>1000, :debit=>0, :balance=>1000}, {:date=>"09/05/2017", :credit=>2000, :debit=>0, :balance=>3000}, {:date=>"09/05/2017", :credit=>0, :debit=>500, :balance=>2500}]
-   end
- end
-
-   describe '#date' do
-     it 'has a date' do
-       expect(subject.date).to eq "09/05/2017"
-     end
-   end
+    end
+  end
 
    describe '#print_transactions' do
      it 'prints transactions' do
