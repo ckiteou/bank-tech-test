@@ -1,7 +1,8 @@
 class BankAccount
   attr_reader :balance, :transaction
+  BALANCE = 0
   def initialize
-    @balance = 0
+    @balance = BALANCE
     @transaction = []
   end
 
@@ -44,13 +45,4 @@ class BankAccount
   def print_divider
     puts "----------------------------------------"
   end
-
 end
-
-ab = BankAccount.new
-ab.credit(1000)
-ab.credit(2000)
-ab.debit(500)
-# p ab.balance
-# p ab.transaction
-ab.pretty_print
