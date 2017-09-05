@@ -21,9 +21,16 @@ class BankAccount
   end
 
   def transactions(credits, debits)
-    # credit_zero = 0
-    # debits_zero = 0
-    @transaction.push(date: date, credit: credits, debit: debits, balance: @balance)
+    # # credit_zero = 0
+    # # debits_zero = 0
+    # @transaction.push(date: date, credit: credits, debit: debits, balance: @balance)
+    # @transaction.each do |each|
+    #   if each != nil && each[:date] == date
+    #     each[:credit] += credits && each[:debit] += debits
+    #   else
+        @transaction.push(date: date, credit: credits, debit: debits, balance: @balance)
+    #   end
+    # end
   end
 
   def pretty_print

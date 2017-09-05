@@ -41,4 +41,29 @@ describe BankAccount do
        expect(subject.date).to eq "09/05/2017"
      end
    end
+
+   describe '#print_transactions' do
+     it 'prints transactions' do
+       subject.credit(1000)
+       expect do
+         subject.print_transactions
+       end.to output("09/05/2017 || 1000   || 0     || 1000\n").to_stdout
+     end
+   end
+
+   describe '#print_header' do
+     it 'prints a header' do
+       expect do
+         subject.print_header
+       end.to output("Date       || Credit || Debit || Balance\n").to_stdout
+     end
+   end
+
+   describe '#print_divider' do
+     it 'prints a divider' do
+       expect do
+         subject.print_divider
+       end.to output("----------------------------------------\n").to_stdout
+     end
+   end
 end

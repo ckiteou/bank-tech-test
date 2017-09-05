@@ -23,4 +23,34 @@ class BankAccount
   def transactions(credits, debits)
     @transaction.push(date: date, credit: credits, debit: debits, balance: @balance)
   end
+
+  def pretty_print
+    print_header
+    print_divider
+    print_transactions
+  end
+
+  def print_transactions
+    to_return = @transaction.map do |each|
+      "#{each[:date]} || #{each[:credit]}   || #{each[:debit]}     || #{each[:balance]}"
+    end
+    to_return.reverse.each { |each| puts each }
+  end
+
+  def print_header
+    puts "Date       || Credit || Debit || Balance"
+  end
+
+  def print_divider
+    puts "----------------------------------------"
+  end
+
 end
+
+ab = BankAccount.new
+ab.credit(1000)
+ab.credit(2000)
+ab.debit(500)
+# p ab.balance
+# p ab.transaction
+ab.pretty_print
