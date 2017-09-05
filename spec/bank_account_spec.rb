@@ -13,4 +13,11 @@ describe BankAccount do
       expect(subject.balance).to eq 100
     end
   end
+
+  describe 'debit' do
+    it 'descreases balance' do
+      subject.debit(100)
+      expect(subject.balance).to eq -100
+    end
+  end
 end
