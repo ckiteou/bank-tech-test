@@ -43,11 +43,3 @@ class BankAccount
     puts "----------------------------------------"
   end
 end
-
-ab = BankAccount.new
-ab.credit(1000)
-ab.credit(2000)
-ab.debit(500)
-p ab.balance
-p ab.transaction
-ab.pretty_print
