@@ -1,7 +1,6 @@
 # Bank Tech Test
 
 ### Specification
----
 
 #### Requirement
 
@@ -15,17 +14,35 @@ Data can be kept in memory (it doesn't need to be stored to a database or anythi
 Given a client makes a deposit of 1000 on 10-01-2012 And a deposit of 2000 on 13-01-2012 And a withdrawal of 500 on 14-01-2012 When she prints her bank statement Then she would see:
 
 ```
-date || credit || debit || balance
+Date || Credit || Debit || Balance
 14/01/2012 || || 500.00 || 2500.00
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
 
- #### Getting started
+### Getting started
 
- #### Usage
+Clone the repo:
 
- #### Running tests
+```
+$ git remote add origin https://github.com/ckiteou/bank-tech-test.git
+$ cd 'bank-tech-test'
+```
 
- #### Authors
- Coasters Kiteou, **Makers Academy** - _Remote Cohort, July 2017_
+#### Usage
+
+```
+$ ab = BankAccount.new
+$ ab.credit(1000)
+$ ab.credit(2000)
+$ ab.debit(500)
+$ ab.pretty_print
+```
+
+#### Running tests
+
+```
+$ rspec
+```
+#### Authors
+Costas Kiteou, **Makers Academy** - _Remote Cohort, July 2017_
